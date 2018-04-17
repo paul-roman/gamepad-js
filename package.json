@@ -1,5 +1,5 @@
 {
-  "name": "gamepad.js",
+  "name": "gamepad-js",
   "version": "0.1.0",
   "description": "Simple HTML5 Gamepad API handler",
   "keywords": [
@@ -7,18 +7,19 @@
     "api",
     "html5"
   ],
-  "homepage": "https://github.com/Tom32i/gamepad.js",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "license": "MIT",
-  "author": {
-    "name": "Thomas JARRAND",
-    "email": "thomas.jarrand@gmail.com",
-    "url": "http://thomas-jarrand.com"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "gulp": "^3.8.*",
-    "gulp-concat": "^2.2.*",
-    "gulp-header": "^1.0.*",
-    "gulp-jshint": "^1.6.*",
-    "gulp-uglify": "^0.3.*"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paul-roman/gamepad.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/paul-roman/gamepad.js/issues"
+  },
+  "homepage": "https://github.com/paul-roman/gamepad.js#readme",
+  "author": ""
 }

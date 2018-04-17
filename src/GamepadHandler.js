@@ -150,3 +150,5 @@ GamepadHandler.prototype.setButton = function(index, button, options)
         });
     }
 };
+
+module.exports = GamepadHandler;

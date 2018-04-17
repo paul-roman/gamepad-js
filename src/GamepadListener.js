@@ -1,3 +1,5 @@
+const GamepadHandler = require('./GamepadHandler');
+
 /**
  * Gamepad Listener
  */
@@ -133,3 +135,5 @@ GamepadListener.prototype.getGamepads = function()
 
     return gamepads && typeof(gamepads) === 'object' ? gamepads : [];
 };
+
+module.exports = GamepadListener;
