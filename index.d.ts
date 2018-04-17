@@ -1,4 +1,4 @@
-declare module 'gamepad-js' {
+declare module 'gamepad-listener' {
 	interface ListenerOptions {
 		analog?: boolean;
 		deadZone?: number;
