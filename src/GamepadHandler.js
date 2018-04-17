@@ -1,3 +1,4 @@
+import EventEmitter from 'events';
 /**
  * Gamepad Handler
  *
@@ -151,4 +152,4 @@ GamepadHandler.prototype.setButton = function(index, button, options)
     }
 };
 
-module.exports = GamepadHandler;
+export default GamepadHandler;
