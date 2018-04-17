@@ -1,6 +1,6 @@
 {
-  "name": "gamepad-js",
-  "version": "0.1.0",
+  "name": "gamepad-listener",
+  "version": "0.2.0",
   "description": "Simple HTML5 Gamepad API handler",
   "keywords": [
     "gamepad",
@@ -13,13 +13,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/paul-roman/gamepad.js.git"
-  },
+  "repository": "git+https://github.com/paul-roman/gamepad.js.git",
   "bugs": {
     "url": "https://github.com/paul-roman/gamepad.js/issues"
   },
   "homepage": "https://github.com/paul-roman/gamepad.js#readme",
-  "author": ""
+  "author": "Paul Roman <paul.roman@epitech.eu>"
 }
