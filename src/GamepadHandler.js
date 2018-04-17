@@ -1,4 +1,6 @@
 import EventEmitter from 'events';
+import OptionResolver from './optionResolverPolyfill';
+
 /**
  * Gamepad Handler
  *

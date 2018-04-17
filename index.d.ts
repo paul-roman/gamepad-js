@@ -23,7 +23,7 @@ declare module 'gamepad-listener' {
 		};
 	}
 
-	export interface GamepadListener {
+	class GamepadListener {
 		new(options: ListenerOptions): undefined;
 		on(event: string, callback: (event: ListenerEvent) => void): void;
 	}

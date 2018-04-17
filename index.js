@@ -1,3 +1,3 @@
-module.exports = {
-  GamepadListener: require('./src/GamepadListener')
-};
+import GamepadListener from './src/GamepadListener';
+
+export { GamepadListener };
