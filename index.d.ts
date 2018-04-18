@@ -13,18 +13,18 @@ declare module 'gamepad-listener' {
 	}
 
 	interface ListenerEvent {
-		details: {
-			index: number;
-			gamepad?: Gamepad;
-			button?: GamepadButton;
-			pressed?: boolean;
-			value?: number;
-			axis?: number;
-		};
+		index: number;
+		gamepad?: Gamepad;
+		button?: GamepadButton;
+		pressed?: boolean;
+		value?: number;
+		axis?: number;
 	}
 
 	class GamepadListener {
-		new(options: ListenerOptions): undefined;
+		constructor(options?: ListenerOptions);
+		start(): void;
+		stop(): void;
 		on(event: string, callback: (event: ListenerEvent) => void): void;
 	}
 }
