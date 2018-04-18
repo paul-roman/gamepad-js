@@ -1,4 +1,4 @@
-gamepad.js
+gamepad-listener
 ================
 
 Simple HTML5 Gamepad API handler
@@ -7,12 +7,17 @@ Demo here: [http://tom32i.github.io/gamepad.js/](http://tom32i.github.io/gamepad
 
 ## Installation:
 
-    npm i gamepad.js
+```
+yarn add gamepad-listener
+```
 
 ## Usage:
 
 ```javascript
-var listener = new GamepadListener();
+import { GamepadListener } from 'gamepad-listener'; // ES6
+const { GamepadListener } = require('gamepad-listener'); // CommonJs
+
+const listener = new GamepadListener();
 ```
 
 ## Options:
@@ -68,57 +73,52 @@ __Listen for value change on gampads:__
 
 listener.on('gamepad:connected',  function (event) {
     /**
-     * event: CustomEvent
-     *   detail: {
-     *       gamepad: Gamepad,
-     *       index: 0
-     *   }
+     * event: {
+     *   gamepad: Gamepad,
+     *   index: 0
+     * }
      */
 });
 
 listener.on('gamepad:disconnected',  function (event) {
     /**
-     * event: CustomEvent
-     *   detail: {
-     *       index: 0
-     *   }
+     * event: {
+     *   index: 0
+     * }
      */
 });
 
 listener.on('gamepad:axis', function (event) {
     /**
-     * event: CustomEvent
-     *   detail: {
-     *       axis: 1,
-     *       gamepad: Gamepad,
-     *       value: -0.34
-     *   }
+     * event: {
+     *   axis: 1,
+     *   gamepad: Gamepad,
+     *   value: -0.34
+     * }
      */
 });
 
 listener.on('gamepad:0:button',  function (event) {
     /**
-     * event: CustomEvent
-     *   detail: {
-     *       gamepad: Gamepad,
-     *       button: GamepadButton,
-     *       pressed: true,
-     *       index: 7,
-     *       value: 0.56
-     *   }
+     * event: {
+     *    gamepad: Gamepad,
+     *   button: GamepadButton,
+     *   pressed: true,
+     *   index: 7,
+     *   value: 0.56
+     * }
      */
 });
 
 listener.on('gamepad:0:button:5',  function (event) {
     /**
-     * event: CustomEvent
-     *   detail: {
-     *       gamepad: Gamepad,
-     *       button: GamepadButton,
-     *       pressed: true,
-     *       index: 5,
-     *       value: 1
-     *   }
+     * event: {
+     *   gamepad: Gamepad,
+     *   button: GamepadButton,
+     *   pressed: true,
+     *   index: 5,
+     *   value: 1
+     * }
      */
 });
 ```
