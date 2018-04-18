@@ -36,7 +36,7 @@ Stick moves below 30% from default positon won't trigger a change.
 Theses options can be set for the whole gamepad:
 
 ```javascript
-var listener = new GamepadListener({
+const listener = new GamepadListener({
     analog: false,
     deadZone: 0.3
 });
@@ -45,7 +45,7 @@ var listener = new GamepadListener({
 Or distinctly for sticks and buttons:
 
 ```javascript
-var listener = new GamepadListener({
+const listener = new GamepadListener({
     button: {
         analog: false
     },
@@ -71,7 +71,7 @@ __Listen for value change on gampads:__
 
 ```javascript
 
-listener.on('gamepad:connected',  function (event) {
+listener.on('gamepad:connected', (event) => {
     /**
      * event: {
      *   gamepad: Gamepad,
@@ -80,7 +80,7 @@ listener.on('gamepad:connected',  function (event) {
      */
 });
 
-listener.on('gamepad:disconnected',  function (event) {
+listener.on('gamepad:disconnected', (event) => {
     /**
      * event: {
      *   index: 0
@@ -88,7 +88,7 @@ listener.on('gamepad:disconnected',  function (event) {
      */
 });
 
-listener.on('gamepad:axis', function (event) {
+listener.on('gamepad:axis', (event) => {
     /**
      * event: {
      *   axis: 1,
@@ -98,7 +98,7 @@ listener.on('gamepad:axis', function (event) {
      */
 });
 
-listener.on('gamepad:0:button',  function (event) {
+listener.on('gamepad:0:button', (event) => {
     /**
      * event: {
      *    gamepad: Gamepad,
@@ -110,7 +110,7 @@ listener.on('gamepad:0:button',  function (event) {
      */
 });
 
-listener.on('gamepad:0:button:5',  function (event) {
+listener.on('gamepad:0:button:5', (event) => {
     /**
      * event: {
      *   gamepad: Gamepad,
