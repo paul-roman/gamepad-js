@@ -1,13 +1,16 @@
 declare module 'gamepad-listener' {
 	interface ListenerOptions {
 		analog?: boolean;
+		precision?: number;
 		deadZone?: number;
 		button?: {
 			analog?: boolean;
+			precision?: number;
 			deadZone?: number;
 		};
 		stick?: {
 			analog?: boolean;
+			precision?: number;
 			deadZone?: number;
 		};
 	}

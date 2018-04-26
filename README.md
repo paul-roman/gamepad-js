@@ -1,4 +1,4 @@
-gamepad.js
+gamepad-listener
 ================
 
 Simple HTML5 Gamepad API handler
@@ -7,12 +7,20 @@ Demo here: [http://tom32i.github.io/gamepad.js/](http://tom32i.github.io/gamepad
 
 ## Installation:
 
-    npm i gamepad.js
+```
+yarn add gamepad-listener
+```
 
 ## Usage:
 
 ```javascript
-var listener = new GamepadListener();
+const { GamepadListener } = require('gamepad-listener'); // CommonJS
+import { GamepadListener } from 'gamepad-listener'; // ES6
+
+const listener = new GamepadListener();
+listener.on('gamepad:axis', (event) => {
+  // event
+});
 ```
 
 ## Options:
@@ -31,7 +39,7 @@ Stick moves below 30% from default positon won't trigger a change.
 Theses options can be set for the whole gamepad:
 
 ```javascript
-var listener = new GamepadListener({
+const listener = new GamepadListener({
     analog: false,
     deadZone: 0.3
 });
@@ -40,7 +48,7 @@ var listener = new GamepadListener({
 Or distinctly for sticks and buttons:
 
 ```javascript
-var listener = new GamepadListener({
+const listener = new GamepadListener({
     button: {
         analog: false
     },
@@ -60,6 +68,7 @@ var listener = new GamepadListener({
 * 'gamepad:{gamepad}:axis:{axis}': When a specific axis on a specific gamepad changes, '{axis}' being the numeric index of the axis.
 * 'gamepad:button': When a gamepad button changes.
 * 'gamepad:{gamepad}:button': When a specific gamepad button changes, '{gamepad}' being the numeric index.
+* 'gamepad:button:{button}': When a specific button on a gamepad changes, '{button}' being the numeric index of the button.
 * 'gamepad:{gamepad}:button:{button}': When a specific button on a specific gamepad changes, '{button}' being the numeric index of the button.
 
 __Listen for value change on gampads:__
